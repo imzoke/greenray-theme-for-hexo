@@ -1,0 +1,40 @@
+/* =Pagination
+----------------------------------------------- */
+#page-nav
+  position: relative
+  margin: 1.5em 0
+  padding: 2.5em 0
+  overflow: hidden
+  border-top: 1px solid #f1f1f1
+  border-bottom: 1px solid #f1f1f1
+
+#page-nav:after, #page-nav:before
+  display: table
+  content: ""
+  line-height: 0
+
+#page-nav:before 
+  display: block
+  width: 1px
+  height: 100%
+  position: absolute
+  background: #f1f1f1
+  top: 0
+  left: 50%
+
+#page-nav .nav-previous
+  float: left
+  width: 50%
+
+#page-nav .nav-next
+  float: right
+  text-align: right
+  width: 50%
+
+#page-nav a, #page-nav a:visited
+  font-size: 0.85em
+  color: #999999
+  text-decoration: none
+
+#page-nav a:hover
+  color: #444; 

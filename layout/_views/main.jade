@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        include head
+    body
+        #container
+            #wrapper
+                .sidebar
+                    header#header
+                        if index == 'index'
+                            h1.site-title: a(href = config.root)
+                                = config.title
+                        else
+                            h2.site-title: a(href = config.root)
+                                = config.title
+                        p
+                            = config.subtitle
+                #main
+                    #primary.content-area
+                        block content
+                        footer#footer Powered by 
+                            a(href="http://hexo.io") Hexo
+                            |  ❤ Theme 
+                            a(href="https://github.com/imzoke/greenray-theme-for-hexo") Greenray
+                            |  by 
+                            a(href="http://imzoke.com/") imzoke
+                            |.
+                

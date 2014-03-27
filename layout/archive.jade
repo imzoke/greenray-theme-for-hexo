@@ -1,0 +1,43 @@
+include _views/archive
+extends _views/main
+
+block content
+    article.article.archive
+        header.article-header
+            h1.article-title
+                = 'Archive'
+        div.article-content
+            -var this_year
+            -var this_month
+            -var last_month
+            -var i=0
+            -page.posts.each(function(post){
+                -i++
+                -var year = post.date.year()
+                -var month = post.date.month()
+                -if(last_month != month && last_month != null){
+                    </ul>
+                -}
+                -if(this_year != year){
+                    h2.archive-title
+                        = year
+                    -this_year = year
+                -}
+                -if(this_month != month){
+                    h3.archive-title
+                        = date(post.date, 'MMMM')
+                -}
+                -if(this_month != month){
+                    <ul>
+                    -this_month = month
+                    -last_month = month
+                -}
+                +archive(post, 'archive')
+                -if(i == page.posts.length){
+                    </ul>
+                -}
+            -})
+
+block head
+    title
+        = 'Archives - ' + config.title
