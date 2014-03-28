@@ -5,11 +5,12 @@ block content
         header.article-header
             h1.article-title
                 = page.title
-            div.article-meta
-                span.date
-                    = 'Posted on '
-                    time(datetime = date_xml(page.date))
-                        =date(page.date, theme.date_format)
+            if page.layout != 'page'
+                div.article-meta
+                    span.date
+                        = 'Posted on '
+                        time(datetime = date_xml(page.date))
+                            =date(page.date, theme.date_format)
         div.article-content
             != page.content
         div.article-footer
