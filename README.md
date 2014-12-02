@@ -20,7 +20,7 @@ Modify `theme` setting in `_config.yml` to `greenray`.
 **Update**
 
 ```
-cd themes/strict
+cd themes/greenray
 git pull
 ```
 ## License
