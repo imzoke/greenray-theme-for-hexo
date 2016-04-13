@@ -1,6 +1,9 @@
 @import "_variables"
 
 @import "_partial/normalize"
+
+@import "_fonts"
+
 @import "_partial/global"
 
 body
@@ -41,6 +44,8 @@ kbd
   border-radius: 3px
   box-shadow: 0 1px 0px rgba(0,0,0,0.2), 0 0 0 2px #fff inset
 
+.reader
+  padding-left: 240px
 
 .sidebar
   display: block
@@ -48,15 +53,14 @@ kbd
   top: 0
   left: 0
   height: 100%
-  width: 30%
-  max-width: 450px
+  width: 240px
   background-color: color-link
   color: color-anti
   z-index: 1000
 
 #header
   bottom: 0
-  padding: 3em
+  padding: 2em
   position: absolute
 
 #header .site-title
@@ -79,9 +83,13 @@ kbd
   overflow: auto
   color: color-default
 
+#main
+  position: relative
+
 #primary
   display: block
   padding: 3em 5em
+  margin: 0 auto
   max-width: max-width
 
 @import "_partial/article"

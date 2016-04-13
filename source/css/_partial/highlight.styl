@@ -1,4 +1,4 @@
-// 
+//
 highlight-background = #2d2d2d
 highlight-current-line = #393939
 highlight-selection = #515151
@@ -162,3 +162,13 @@ pre
   .keyword
   .javascript .function
     color: highlight-purple
+
+pre::-webkit-scrollbar, .highlight::-webkit-scrollbar, .gist-highlight::-webkit-scrollbar
+    height: .5em
+    background: rgba(255, 255, 255, 0.15)
+
+pre::-webkit-scrollbar-thumb:horizontal, .highlight::-webkit-scrollbar-thumb:horizontal,
+.gist-highlight::-webkit-scrollbar-thumb:horizontal
+    background: rgba(255, 255, 255, 0.2)
+    -webkit-border-radius: 4px
+    border-radius: 4px
