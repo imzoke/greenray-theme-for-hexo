@@ -2,19 +2,19 @@ extends _views/main
 
 block content
     article.article.page
-        header.article-header
-            h1.article-title
+        header.header
+            h1.title
                 = page.title
             if page.layout != 'page'
-                div.article-meta
+                div.meta
                     span.date
                         = 'Posted on '
                         time(datetime = date_xml(page.date))
                             =date(page.date, theme.date_format)
-        div.article-content
+        div.content
             != page.content
-        div.article-footer
-    nav#page-nav
+        div.footer
+    nav#page-nav.page-nav
         div.nav-links
             div.nav-previous
                 if page.next

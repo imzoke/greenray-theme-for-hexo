@@ -3,24 +3,24 @@ extends _views/main
 block content
     -page.posts.each(function(post){
         article.article
-            header.article-header
-                h2.article-title: a(href=config.root + post.path)
+            header.header
+                h2.title: a(href=config.root + post.path)
                     = post.title
-                div.article-meta
+                div.meta
                     span.date
                         = 'Posted on '
                         time(datetime = date_xml(post.date))
                             =date(post.date, theme.date_format)
-            div.article-content
+            div.content
                 if post.excerpt
                     != post.excerpt
-                    p.article-more-link
+                    p.more-link
                         a(href=config.root + post.path + '#more')= theme.excerpt_link
                 else
                     != post.content
-            div.article-footer
+            div.footer
     -})
-    nav#page-nav
+    nav#page-nav.page-nav
         div.nav-links
             div.nav-previous
                 if page.next

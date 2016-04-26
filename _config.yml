@@ -4,3 +4,6 @@ excerpt_link: Keep reading...
 # main
 date_format: 'MMMM D, YYYY'
 time_format: HH:mm:ss
+less:
+  paths:
+    - source/css

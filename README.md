@@ -10,6 +10,7 @@ Greenray 是一个简洁的主题，抛弃繁杂，回归最纯粹的阅读。
 
 ```
 $ npm install hexo-renderer-jade --save
+$ npm install hexo-renderer-less --save
 $ git clone https://github.com/imzoke/greenray-theme-for-hexo.git themes/greenray
 ```
 

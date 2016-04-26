@@ -1,0 +1,113 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+@gray-base:                     #000;
+@gray-darker:                   lighten(@gray-base, 13.5%); // #222
+@gray-dark:                     lighten(@gray-base, 20%);   // #333
+@gray:                          lighten(@gray-base, 33.5%); // #555
+@gray-light:                    lighten(@gray-base, 60%); // #999
+@gray-lighter:                  lighten(@gray-base, 93.5%); // #eee
+
+
+@highlight-color-base:          #33691E;
+@highlight-color-darker:        lighten(@highlight-color-base , 13.5%);
+@highlight-color-dark:          lighten(@highlight-color-base, 20%);
+@highlight-color:               lighten(@highlight-color-base, 33.5%);
+@highlight-color-light:         lighten(@highlight-color-base, 46.7%);
+@highlight-color-lighter:       lighten(@highlight-color-base, 93.5%);
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #fff;
+//** Global text color on `<body>`.
+@text-color:            @gray;
+
+//** Global textual link color.
+@link-color:            @highlight-color;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      @gray;
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif:   "Roboto Slab", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       "Roboto Slab", Georgia, "Times New Roman", Times, "Songti SC", "SimSun", serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          16px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            2.0em; // ~36px
+@font-size-h2:            1.7em; // ~30px
+@font-size-h3:            1.4em;
+@font-size-h4:            1.15em;
+@font-size-h5:            @font-size-base;
+@font-size-h6:            0.8em; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.75; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    1.5em; // ~20px
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    inherit;
+@headings-font-weight:    600;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+
+
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
+
+
+@state-warning-text:             #8a6d3b;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+
+//** Abbreviations and acronyms border color
+@abbr-border-color:           @gray-light;
+//** Headings small color
+@headings-small-color:        @gray-light;
+//** Blockquote small color
+@blockquote-small-color:      @highlight-color-light;
+//** Blockquote font size
+@blockquote-font-size:        (@font-size-base * 1.25);
+//** Blockquote border color
+@blockquote-border-color:     @highlight-color-light;
+
+
+//== Code
+//
+//##
+
+@code-color:                  #fff;
+@code-bg:                     @highlight-color-light;
+
+@kbd-color:                   #fff;
+@kbd-bg:                      @highlight-color;
+
+@pre-bg:                      #f5f5f5;
+@pre-color:                   @gray-dark;
+@pre-border-color:            #ccc;
+@pre-scrollable-max-height:   340px;
+

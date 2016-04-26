@@ -3,34 +3,40 @@ extends _views/main
 
 block content
     article.article.archive
-        header.article-header
-            h1.article-title
+        header.header
+            h1.title
                 = 'Archive'
-        div.article-content
+        div.content
             -var this_year
             -var this_month
+            -var last_year
             -var last_month
             -var i=0
             -page.posts.each(function(post){
                 -i++
                 -var year = post.date.year()
                 -var month = post.date.month()
-                -if(last_month != month && last_month != null){
+                -if(last_year != year && last_year != null){
                     </ul>
+                -}
+                -if(last_month != month && last_month != null){
+                        </ul>
+                    </li>
                 -}
                 -if(this_year != year){
                     h2.archive-title
                         = year
                     -this_year = year
-                -}
-                -if(this_month != month){
-                    h3.archive-title
-                        = date(post.date, 'MMMM')
-                -}
-                -if(this_month != month){
+                    -last_year = year
                     <ul>
-                    -this_month = month
-                    -last_month = month
+                -}
+                -if(this_month != month){
+                    li
+                        h3.archive-title
+                            = date(post.date, 'MMMM')
+                        <ul>
+                        -this_month = month
+                        -last_month = month
                 -}
                 +archive(post, 'archive')
                 -if(i == page.posts.length){

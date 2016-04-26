@@ -1,0 +1,244 @@
+@import "_variables.less";
+@import "_mixins.less";
+@import "_normalize.less";
+@import "_font.less";
+@import "_scaffolding.less";
+@import "_type.less";
+@import "_code.less";
+
+::selection {
+    background: @highlight-color;
+    color: #f4f9f6;
+}
+
+
+.reader {
+    padding-left: 280px;
+}
+
+.container {}
+
+.sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px;
+    background-color: @highlight-color;
+    color: #f4f9f6;
+    z-index: 1000;
+
+    .header {
+        bottom: 0;
+        padding: 2em;
+        position: absolute;
+
+        .title {
+            margin: 0;
+            font-size: 2.5em;
+            line-height: 1.1;
+
+            a {
+                position: relative;
+                color: #f4f9f6;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.content-area {
+    display: block;
+    padding: 3em 5em;
+    margin: 0 auto;
+    max-width: 800px;
+
+    .footer {
+        font-size: 0.85em;
+        text-align: center;
+        .opacity(0.3);
+        .transition-animation(opacity);
+        a {
+            .transition-animation(color);
+        }
+        &:hover {
+            .opacity(1);
+        }
+    }
+}
+
+.article {
+    margin: 1.5em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .header {
+        .title {
+            border-bottom: 1px solid #f1f1f1;
+            border-top: 1px solid #f1f1f1;
+            margin-bottom: 0.5em;
+            padding: 1em 0;
+            font-size: 1.8em;
+            margin-top: 0;
+
+            a {
+                color: #444;
+                text-decoration: none;
+
+                &:hover {
+                    color: @highlight-color;
+                }
+            }
+        }
+        .meta {
+            padding: 0;
+            color: #999;
+            text-decoration: none;
+        }
+    }
+
+    .content {
+        h1, h2, h3, h4, h5 {
+            font-family: @font-family-serif;
+        }
+        padding: 1.5em 0 0;
+
+        img {
+            max-width: 100%;
+        }
+
+        .more-link {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.page {
+    margin-top: 0;
+    
+    .header {
+        .title {
+            border-top: 0;
+            margin-top: 0;
+            padding: 0 0 1em 0;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .meta {
+            font-size: 0.85em;
+            text-align: center;
+        }
+    }
+}
+
+.page-nav {
+    position: relative;
+    margin: 1.5em 0;
+    padding: 2.5em 0;
+    overflow: hidden;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+
+    &:before {
+        display: block;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: 50%;
+    }
+
+    .nav-links {
+        overflow: auto;
+    }
+
+    .nav-previous {
+        float: left;
+    }
+
+    .nav-next {
+        float: right;
+        text-align: right;
+    }
+
+    .nav-previous,
+    .nav-next {
+        width: 50%;
+
+        a {
+            font-size: 0.85em;
+            color: #999;
+            text-decoration: none;
+        }
+    }
+}
+
+.archive {
+    .content {
+        padding: 1.5em 0;
+        h2.archive-title:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .reader {
+        padding-left: 0;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: center;
+
+        .header {
+            position: static;
+            bottom: auto;
+            margin: 0 auto;
+            padding: 4em 2em;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .content-area {
+        padding-top: 0;
+    }
+
+    .page {
+        .header {
+            .title {
+                padding: 1em 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .content-area {
+        padding: 1em 1.5em;
+    }
+}
+
+@import "_highlight.less";

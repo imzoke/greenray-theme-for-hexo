@@ -1,0 +1,15 @@
+// Opacity
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+
+.transition-animation(@type) {
+    -webkit-transition: @type 0.5s;
+    -moz-transition: @type 0.5s;
+    transition: @type 0.5s;
+}
