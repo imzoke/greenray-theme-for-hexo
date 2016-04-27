@@ -8,15 +8,14 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-base:                     #000;
-@gray-darker:                   lighten(@gray-base, 13.5%); // #222
 @gray-dark:                     lighten(@gray-base, 20%);   // #333
 @gray:                          lighten(@gray-base, 33.5%); // #555
-@gray-light:                    lighten(@gray-base, 60%); // #999
-@gray-lighter:                  lighten(@gray-base, 93.5%); // #eee
+@gray-light:                    lighten(@gray-base, 60%);   // #999
+@gray-lighter:                  lighten(@gray-base, 80%);   // #ccc
 
 
 @highlight-color-base:          #33691E;
-@highlight-color-darker:        lighten(@highlight-color-base , 13.5%);
+@highlight-color-darker:        lighten(@highlight-color-base, 13.5%);
 @highlight-color-dark:          lighten(@highlight-color-base, 20%);
 @highlight-color:               lighten(@highlight-color-base, 33.5%);
 @highlight-color-light:         lighten(@highlight-color-base, 46.7%);
@@ -51,20 +50,20 @@
 @font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          16px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~20px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~14px
 
-@font-size-h1:            2.0em; // ~36px
-@font-size-h2:            1.7em; // ~30px
+@font-size-h1:            2.0em;
+@font-size-h2:            1.7em;
 @font-size-h3:            1.4em;
 @font-size-h4:            1.15em;
 @font-size-h5:            @font-size-base;
-@font-size-h6:            0.8em; // ~12px
+@font-size-h6:            0.8em;
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.75; // 20/14
+@line-height-base:        1.75;
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-@line-height-computed:    1.5em; // ~20px
+@line-height-computed:    1.5em;
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
@@ -73,15 +72,14 @@
 @headings-color:          inherit;
 
 
+@border-radius-base:      4px;
+@border-radius-large:     6px;
+@border-radius-small:     3px;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
 
-
-@state-warning-text:             #8a6d3b;
-@state-warning-bg:               #fcf8e3;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+@state-warning-text:      #8a6d3b;
+@state-warning-bg:        #fcf8e3;
+@state-warning-border:    darken(spin(@state-warning-bg, -10), 5%);
 
 
 //** Abbreviations and acronyms border color
@@ -89,9 +87,7 @@
 //** Headings small color
 @headings-small-color:        @gray-light;
 //** Blockquote small color
-@blockquote-small-color:      @highlight-color-light;
-//** Blockquote font size
-@blockquote-font-size:        (@font-size-base * 1.25);
+@blockquote-small-color:      @gray-lighter;
 //** Blockquote border color
 @blockquote-border-color:     @highlight-color-light;
 
@@ -111,3 +107,10 @@
 @pre-border-color:            #ccc;
 @pre-scrollable-max-height:   340px;
 
+
+//== Page
+// 
+//##
+@sidebar-width:               280px;
+
+@border-color:                #f1f1f1;

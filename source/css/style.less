@@ -13,7 +13,7 @@
 
 
 .reader {
-    padding-left: 280px;
+    padding-left: @sidebar-width;
 }
 
 .container {}
@@ -24,7 +24,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 280px;
+    width: @sidebar-width;
     background-color: @highlight-color;
     color: #f4f9f6;
     z-index: 1000;
@@ -77,8 +77,8 @@
 
     .header {
         .title {
-            border-bottom: 1px solid #f1f1f1;
-            border-top: 1px solid #f1f1f1;
+            border-bottom: 1px solid @border-color;
+            border-top: 1px solid @border-color;
             margin-bottom: 0.5em;
             padding: 1em 0;
             font-size: 1.8em;
@@ -142,8 +142,8 @@
     margin: 1.5em 0;
     padding: 2.5em 0;
     overflow: hidden;
-    border-top: 1px solid #f1f1f1;
-    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
 
     &:before,
     &:after {
@@ -157,7 +157,7 @@
         width: 1px;
         height: 100%;
         position: absolute;
-        background: #f1f1f1;
+        background: @border-color;
         top: 0;
         left: 50%;
     }
