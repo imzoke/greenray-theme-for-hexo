@@ -1,9 +1,15 @@
 meta(charset='utf-8')
 meta(http-equiv='X-UA-Compatible', content='IE=edge')
 meta(name='viewport' content='width=device-width, initial-scale=1.0,user-scalable=no')
+block head
+if page.keywords
+    meta(name='keywords', content=page.keywords + ', ' + config.keywords)
+else if config.keywords
+    meta(name='keywords', content=config.keywords)
+if page.excerpt
+    meta(name='description', content=strip_html(page.excerpt).substring(0, 199).replace(/\n/g, '') + '...')
 if theme.rss
     link(rel='alternate', href=theme.rss, title=config.title, type='application/atom+xml')
 if theme.favicon
     link(rel='icon', href=theme.favicon)
-block head
 != css('css/style')
