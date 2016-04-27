@@ -425,7 +425,7 @@ figure {
 img {
   vertical-align: middle;
   display: block;
-  margin: 0 0 1.5em;
+  margin: 0 auto 1.5em;
   height: auto;
   max-width: 100%;
   -webkit-border-radius: 5px;
@@ -617,7 +617,7 @@ mark,
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 0.75em;
+  margin-bottom: 1.5em;
 }
 ul ul,
 ol ul,
@@ -646,6 +646,7 @@ blockquote {
   margin: 0 1.5em 1.5em;
   color: #999999;
   border-left: 5px solid #aae195;
+  font-family: "Roboto Slab", Georgia, "Times New Roman", Times, "Songti SC", "SimSun", serif;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -669,6 +670,9 @@ address {
   margin-bottom: 1.5em;
   font-style: normal;
   line-height: 1.75;
+}
+del {
+  opacity: 0.5;
 }
 code,
 kbd,
